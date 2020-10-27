@@ -93,17 +93,22 @@ In this case you can have a fixed number of instances to the group (1, 2, 4, 8),
 
 Take action instances:
 
+
 1 instances when 50 <- CPU utilization 60
+
 2 instances when 60 <- CPU utilization 70
+
 4 instances when 70 <- CPU utilization 80
+
 8 instances when 80 <- CPU utilization infinity
 
-Instances need 300 second to warm up after each step
+(Instances need 300 second to warm up after each step)
 
 And you can also define a similar set of increasingly aggressive policies for scaling down.
 Step policies continuously evaluate the alarms during a scaling activity and while unhealthy instances are being replaced with new ones. This allows for faster response to changes in demand. Let’s say the CPU load increases and the first step in the policy is activated. During the specified warm up period (300 seconds in this example), the load might continue to increase and a more aggressive response might be appropriate.
 
 **Conclusion**
+
 Fortunately, Auto Scaling is in violent agreement with this sentiment and will switch in to high gear (and use one of the higher steps) automatically. If you create multiple step scaling policies for the same resource (perhaps based on CPU utilization and inbound network traffic) and both of them fire at approximately the same time, Auto Scaling will look at both policies and choose the one that results in the change of the highest magnitude
 
 # Whats Amazon ElastiCache for Redis.
