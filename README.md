@@ -64,7 +64,7 @@ sudo mount -t nfs
 
   
 
-![enter image description here](https://user-images.githubusercontent.com/12648295/97111064-972b3080-16d4-11eb-86e5-82767eeb4d07.png)
+![enter image description here](https://user-images.githubusercontent.com/12648295/97328004-764a1300-186d-11eb-871e-866749f68023.png)
 
   
 
@@ -74,7 +74,7 @@ This is the final step and takes action when the alarm is raised and is handled 
 
   
 
-![enter image description here](https://user-images.githubusercontent.com/12648295/97111052-8e3a5f00-16d4-11eb-967b-65168d8063df.png)
+![enter image description here](https://user-images.githubusercontent.com/12648295/97328084-8e219700-186d-11eb-8b4f-a9c8990187a9.png)
 
   
 For example if you try to keep average CPU below 50%  
@@ -119,8 +119,8 @@ Deploying Redis makes use of familiar concepts such as clusters and nodes. Howev
 An ElastiCache for Redis replication group consists of a primary and up to five read replicas. Redis 
 asynchronously replicates the data from the primary to the read replicas. Because Redis supports persistence, it is technically possible to use Redis as your only data store. In practice, customers find that a managed database such as Amazon DynamoDB or Amazon RDS is a better fit for most use cases of long-term data storage. ElastiCache for Redis has the concept of a primary endpoint, which is a DNS name that always points to the current Redis primary node. If a failover event occurs, the DNS entry will be updated to point to the new Redis primary node. To take advantage of this functionality, make sure to configure your Redis client so that it uses the primary endpoint DNS name to access your Redis cluster.
 
-[foto]
 
+![enter image description here](https://user-images.githubusercontent.com/12648295/97328179-aa253880-186d-11eb-9349-b0fae4e21926.png)
   
 
 ## Distributing Reads and Writes.
@@ -130,8 +130,7 @@ only has to deal with writes
 
   
 
-[foto]
-
+![enter image description here](https://user-images.githubusercontent.com/12648295/97328145-9ed20d00-186d-11eb-9ff7-bbf31a2ff181.png)
   
 
 ## Multi-AZ with Auto-Failover.
@@ -147,15 +146,13 @@ Redis has two categories of data structures: simple keys and counters, and multi
 
   
 
-[foto]
+![enter image description here](https://user-images.githubusercontent.com/12648295/97328223-b3160a00-186d-11eb-9247-482c71b00492.png)
 
   
 
 You can also combine horizontal sharing with split reads and writes. In this setup, you have two or more Redis clusters, each of which stores part of the key space. You configure your application with two separate sets of Redis handles, a write handle that points to the shared masters and a read handle that points to the shared replicas. Following is an example architecture, this time with Amazon DynamoDB rather than MySQL, just to illustrate that you can use either one:
 
-[foto]
-
-  
+![enter image description here](https://user-images.githubusercontent.com/12648295/97328244-bc06db80-186d-11eb-95a6-f3e928dbaa34.png)  
 
 ## Recommendation Engines.
 
