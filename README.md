@@ -21,6 +21,10 @@
  ## Creating stacks
 
 Download the YAML file and use the AWS CloudFormation Console to run the templates. Click the "Create Stack" button in the upper left corner of the console, then under "Choose a template", select "Upload a template to Amazon S3" and click "Browse" to find your local fork of this repository and choose the template you want to run.
+
+## Note
+
+To create a file system, the only requirement is that you create a token to ensure idempotent operation. If you use the console, it generates the token for you. For more information, see [CreateFileSystem](https://docs.aws.amazon.com/efs/latest/ug/API_CreateFileSystem.html).
   
 ### EFS mount targets:
 
