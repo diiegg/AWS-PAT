@@ -228,8 +228,6 @@ MIT
   
 
 - [AWS Elastic ache Redis](https://aws.amazon.com/elasticache/redis/)
- 
-- [PHP on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-redis-server-as-a-session-handler-for-php-on-ubuntu-14-04)
 
 - [AWS NFS](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-redis-server-as-a-session-handler-for-php-on-ubuntu-14-04)
 
